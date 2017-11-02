@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Comments</title>
+    <script src="js/sockjs-0.3.4.js" ></script>
+    <script src="js/stomp.js" ></script>
+    <script src="js/comments.js" ></script>
+    <link rel="stylesheet" href="css/comments.css" />
+</head>
+<body onload="connect()">
+<noscript><h2 style="color: #ff0000">Javascript not supported</h2></noscript>
+<div id="comments_block">
+    <label class="new_comment_header">New comment</label>
+    <div id="comment_data_input" class="comment_fields">
+        <label class="label_field">Name:</label><input type="text" id="name" class="input_field"/>
+        <label class="label_field">Comment:</label><input type="text" id="comment" class="input_field"/>
+        <button id="sendComment" onclick="sendComment();" >Add</button>
+    </div>
+    <label class="list_header">List of comments</label>
+    <div id="commentsDiv" >
+        <div th:each="comment : ${commentsList}">
+            <span id="comment_name" class="list_comment_name" th:text="${comment.name}"></span>
+            <span id="comment_comment" class="list_comment_comment" th:text="${comment.comment}"></span><br/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

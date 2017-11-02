@@ -1,0 +1,47 @@
+.list_comment_name {
+    display: block;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.list_comment_comment {
+    display: block;
+    font-style: italic;
+    font-size: medium;
+}
+
+.list_header {
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: underline;
+}
+
+.comment_fields {
+    display: block;
+    padding-top: 6px;
+}
+
+.input_field {
+    margin-right: 6px;
+}
+
+.new_comment_header {
+    display: block;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: underline;
+}
+
+.label_field {
+    padding-right: 6px;
+    font-size: medium;
+}
+
+#comments_block {
+    display: block;
+    margin-top: 50px;
+    margin-left: 50px;
+}
